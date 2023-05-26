@@ -1,0 +1,187 @@
+//To simulate the huwentoxin effect, hw=0, bw=0.8, qa=6.4 and cana=0.2
+//To simulate any other block, the corresponding conductance is 80% less
+
+proc run_control() {
+hw_na12 = 0.015
+
+bw_na12 = 1
+
+qa_na12 = 6.8
+
+cana_na12	 = 0.4
+
+gca_soma	 = 0.0005
+
+gca_ais1	 = 0.0005
+
+gca_ais2	 = 3e-05
+
+gca_ais3	 = 0
+
+git2_soma = 0.0003
+
+git2_ais1 = 0.0001
+
+git2_ais2 = 3e-05
+
+git2_ais3 = 3e-06
+
+gskca_soma = 0.02
+
+gbkca_soma = 10
+
+gskca_ais = 0.02
+
+gbkca_ais = 1000
+
+init_channels()
+run()
+}
+
+proc run_na12() {
+hw_na12 = 0.0
+
+bw_na12 = 0.8
+
+qa_na12 = 6.4
+
+cana_na12	 = 0.2
+
+gca_soma	 = 0.0005
+
+gca_ais1	 = 0.0005
+
+gca_ais2	 = 3e-05
+
+gca_ais3	 = 0
+
+git2_soma = 0.0003
+
+git2_ais1 = 0.0001
+
+git2_ais2 = 3e-05
+
+git2_ais3 = 3e-06
+
+gskca_soma = 0.02
+
+gbkca_soma = 10
+
+gskca_ais = 0.02
+
+gbkca_ais = 1000
+
+init_channels()
+run()
+}
+
+proc run_sk() {
+hw_na12 = 0.015
+
+bw_na12 = 1
+
+qa_na12 = 6.8
+
+cana_na12	 = 0.4
+
+gca_soma	 = 0.0005
+
+gca_ais1	 = 0.0005
+
+gca_ais2	 = 3e-05
+
+gca_ais3	 = 0
+
+git2_soma = 0.0003
+
+git2_ais1 = 0.0001
+
+git2_ais2 = 3e-05
+
+git2_ais3 = 3e-06
+
+gskca_soma = 0.02*0.2
+
+gbkca_soma = 10
+
+gskca_ais = 0.02*0.2
+
+gbkca_ais = 1000
+
+init_channels()
+run()
+}
+
+proc run_bk() {
+hw_na12 = 0.015
+
+bw_na12 = 1
+
+qa_na12 = 6.8
+
+cana_na12	 = 0.4
+
+gca_soma	 = 0.0005
+
+gca_ais1	 = 0.0005
+
+gca_ais2	 = 3e-05
+
+gca_ais3	 = 0
+
+git2_soma = 0.0003
+
+git2_ais1 = 0.0001
+
+git2_ais2 = 3e-05
+
+git2_ais3 = 3e-06
+
+gskca_soma = 0.02
+
+gbkca_soma = 10*0.2
+
+gskca_ais = 0.02
+
+gbkca_ais = 1000*0.2
+
+init_channels()
+run()
+}
+
+proc run_vgcc() {
+hw_na12 = 0.015
+
+bw_na12 = 1
+
+qa_na12 = 6.8
+
+cana_na12	 = 0.4
+
+gca_soma	 = 0.0005*0.2
+
+gca_ais1	 = 0.0005*0.2
+
+gca_ais2	 = 3e-05*0.2
+
+gca_ais3	 = 0
+
+git2_soma = 0.0003*0.2
+
+git2_ais1 = 0.0001*0.2
+
+git2_ais2 = 3e-05*0.2
+
+git2_ais3 = 3e-06*0.2
+
+gskca_soma = 0.02
+
+gbkca_soma = 10
+
+gskca_ais = 0.02
+
+gbkca_ais = 1000
+
+init_channels()
+run()
+}

@@ -1,0 +1,119 @@
+
+proc run_plots() {
+
+graphList[0].remove_all()
+graphList[1].remove_all()
+
+
+{
+save_window_ = new Graph(0)
+save_window_.size(0,8,-76,34)
+scene_vector_[2] = save_window_
+{save_window_.view(0, -76, 8, 110, 20, 20, 420, 300)}
+graphList[0].append(save_window_)
+save_window_.save_name("graphList[0].")
+save_window_.addexpr("soma.v(.5)", 1, 1, 0.8, 0.9, 2)
+save_window_.addexpr("axon[0].v(.8)", 2, 1, 0.8, 0.9, 2)
+save_window_.addexpr("axon[0].v(.3)", 3, 1, 0.8, 0.9, 2)
+voltage.plot(save_window_, .05,4,1)
+}
+{
+save_window_ = new Graph(0)
+save_window_.size(0,8,10,11.2)
+scene_vector_[3] = save_window_
+{save_window_.view(0, 10, 8, 1.2, 20, 840, 210, 200)}
+graphList[1].append(save_window_)
+save_window_.save_name("graphList[1].")
+save_window_.addvar("axon[0].nai( 0.07 )", 3, 1, 0.8, 0.9, 2)
+concb1.plot(save_window_, .1,1,1)
+}
+{
+save_window_ = new Graph(0)
+save_window_.size(0,8,10,11.2)
+scene_vector_[4] = save_window_
+{save_window_.view(0, 10, 8, 1.2, 340, 840, 210, 200)}
+graphList[1].append(save_window_)
+save_window_.save_name("graphList[1].")
+save_window_.addexpr("axon[0].nai(.14)", 3, 1, 0.8, 0.9, 2)
+concb2.plot(save_window_, .1,1,1)
+}
+{
+save_window_ = new Graph(0)
+save_window_.size(0,8,10,11.2)
+scene_vector_[5] = save_window_
+{save_window_.view(0, 10, 8, 1.2, 660, 840, 210, 200)}
+graphList[1].append(save_window_)
+save_window_.save_name("graphList[1].")
+save_window_.addexpr("axon[0].nai(.2)", 3, 1, 0.8, 0.9, 2)
+concb3.plot(save_window_, .1,1,1)
+}
+{
+save_window_ = new Graph(0)
+save_window_.size(0,8,10,11.2)
+scene_vector_[6] = save_window_
+{save_window_.view(0, 10, 8, 1.2, 980, 840, 210, 200)}
+graphList[1].append(save_window_)
+save_window_.save_name("graphList[1].")
+save_window_.addexpr("axon[0].nai(.3)", 2, 1, 0.8, 0.9, 2)
+concb4.plot(save_window_, .1,1,1)
+}
+{
+save_window_ = new Graph(0)
+save_window_.size(0,8,10,11.2)
+scene_vector_[7] = save_window_
+{save_window_.view(0, 10, 8, 1.2, 1300, 840, 210, 200)}
+graphList[1].append(save_window_)
+save_window_.save_name("graphList[1].")
+save_window_.addexpr("axon[0].nai(.38)", 3, 1, 0.8, 0.9, 2)
+concb5.plot(save_window_, .1,1,1)
+}
+{
+save_window_ = new Graph(0)
+save_window_.size(0,8,10,11.2)
+scene_vector_[8] = save_window_
+{save_window_.view(0, 10, 8, 1.2, 1620, 840, 210, 200)}
+graphList[1].append(save_window_)
+save_window_.save_name("graphList[1].")
+save_window_.addexpr("axon[0].nai(.57)", 3, 1, 0.8, 0.9, 2)
+concb6.plot(save_window_, .1,1,1)
+}
+{
+save_window_ = new Graph(0)
+save_window_.size(0,8,10,11.2)
+scene_vector_[9] = save_window_
+{save_window_.view(0, 10, 8, 1.2, 1940, 840, 210, 200)}
+graphList[1].append(save_window_)
+save_window_.save_name("graphList[1].")
+save_window_.addexpr("axon[0].nai(.8)", 2, 1, 0.8, 0.9, 2)
+concb7.plot(save_window_, .1,1,1)
+}
+
+
+
+{
+save_window_ = new Graph(0)
+save_window_.size(0,8,0,0.02)
+scene_vector_[6] = save_window_
+{save_window_.view(0, 0, 8, 0.02, 980, 490, 210, 200)}
+graphList[1].append(save_window_)
+save_window_.save_name("graphList[1].")
+save_window_.addexpr("axon[0].BTC_ca_cdp5(.3)-0.0057", 2, 1, 0.8, 0.9, 2)
+conc4.plot(save_window_, .1,1,1)
+}
+
+{
+save_window_ = new Graph(0)
+save_window_.size(0,8,0,0.02)
+scene_vector_[9] = save_window_
+{save_window_.view(0, 0, 8, 0.02, 1940, 490, 210, 200)}
+graphList[1].append(save_window_)
+save_window_.save_name("graphList[1].")
+save_window_.addexpr("axon[0].BTC_ca_cdp5(.8)-0.0057", 2, 1, 0.8, 0.9, 2)
+conc7.plot(save_window_, .1,1,1)
+
+}
+
+}
+
+
+

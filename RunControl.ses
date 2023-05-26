@@ -1,0 +1,51 @@
+//Run control
+{
+xpanel("RunControl", 0)
+v_init = -80
+xvalue("Init","v_init", 1,"stdinit()", 1, 1 )
+xbutton("Init & Run","run()")
+xbutton("Stop","stoprun=1")
+runStopAt = 8
+xvalue("Continue til","runStopAt", 1,"{continuerun(runStopAt) stoprun=1}", 1, 1 )
+runStopIn = 8
+xvalue("Continue for","runStopIn", 1,"{continuerun(t + runStopIn) stoprun=1}", 1, 1 )
+xbutton("Single Step","steprun()")
+t = 8
+xvalue("t","t", 2 )
+tstop = 8
+xvalue("Tstop","tstop", 1,"tstop_changed()", 0, 1 )
+dt = 0.01
+xvalue("dt","dt", 1,"setdt()", 0, 1 )
+steps_per_ms = 100
+xvalue("Points plotted/ms","steps_per_ms", 1,"setdt()", 0, 1 )
+screen_update_invl = 0.1
+xvalue("Scrn update invl","screen_update_invl", 1,"", 0, 1 )
+realtime = 8.54
+xvalue("Real Time","realtime", 0,"", 0, 1 )
+xpanel(663,20)
+}
+
+
+//Stimulation Control
+{
+xpanel("Cclamp", 0)
+cdelay1 = 1.8
+xvalue("del1","cdelay1", 1,"init_channels()", 0, 0 )
+cduration1 = 4
+xvalue("dur1","cduration1", 1,"init_channels()", 0, 0 )
+camplitude1 = -0.15
+xvalue("ampl1","camplitude1", 1,"init_channels()", 0, 0 )
+cicin = 0
+xvalue("init1","cicin", 1,"init_channels()", 0, 0 )
+xpanel(975,20)
+}
+
+{
+xpanel("Run Experiments", 0)
+xbutton("Run Control","run_control()")
+xbutton("Run Nav1.2 block","run_na12()")
+xbutton("Run SK","run_sk()")
+xbutton("Run BK block","run_bk()")
+xbutton("Run VGCCs block","run_vgcc()")
+xpanel(975,220)
+}

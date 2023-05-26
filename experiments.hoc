@@ -1,0 +1,177 @@
+
+{load_file("nrngui.hoc")}
+objectvar save_window_, rvp_
+objectvar scene_vector_[10]
+objectvar ocbox_, ocbox_list_, scene_, scene_list_
+{ocbox_list_ = new List()  scene_list_ = new List()}
+
+
+
+objref InjectMatrix4
+
+objref InjectFile4,  conc4
+InjectFile4 = new File("ca4.dat")
+InjectFile4.ropen()
+
+InjectMatrix4 = new Matrix()
+InjectMatrix4.scanf(InjectFile4,80,2)
+conc4 = new Vector(80)
+for(i=0; i<conc4.size; i = i+1){
+	if(i>=InjectMatrix4.nrow){
+		conc4.x[i] = conc4.x[i-1]*3.15
+	}else{
+		conc4.x[i]=InjectMatrix4.x[i][1]*3.15
+	}
+}
+
+
+objref InjectMatrix7
+
+objref InjectFile7,  conc7
+InjectFile7 = new File("ca7.dat")
+InjectFile7.ropen()
+
+InjectMatrix7 = new Matrix()
+InjectMatrix7.scanf(InjectFile7,80,2)
+conc7 = new Vector(80)
+for(i=0; i<conc7.size; i = i+1){
+	if(i>=InjectMatrix7.nrow){
+		conc7.x[i] = conc7.x[i-1]*0.8
+	}else{
+		conc7.x[i]=InjectMatrix7.x[i][1]*0.8
+	}
+}
+
+
+objref InjectMatrix
+
+objref InjectFile,  voltage
+InjectFile = new File("v.dat")
+InjectFile.ropen()
+
+InjectMatrix = new Matrix()
+InjectMatrix.scanf(InjectFile,160,2)
+voltage = new Vector(160)
+for(i=0; i<voltage.size; i = i+1){
+	if(i>=InjectMatrix.nrow){
+		voltage.x[i] = voltage.x[i-1]
+	}else{
+		voltage.x[i]=InjectMatrix.x[i][1]
+	}
+}
+
+
+objref InjectMatrix11
+
+objref InjectFile11,  concb1
+InjectFile11 = new File("na1.dat")
+InjectFile11.ropen()
+
+InjectMatrix11 = new Matrix()
+InjectMatrix11.scanf(InjectFile11,80,2)
+concb1 = new Vector(80)
+for(i=0; i<concb1.size; i = i+1){
+	if(i>=InjectMatrix11.nrow){
+		concb1.x[i] = concb1.x[i-1]
+	}else{
+		concb1.x[i]=InjectMatrix11.x[i][1]
+	}
+}
+
+objref InjectMatrix12
+
+objref InjectFile12,  concb2
+InjectFile12 = new File("na2.dat")
+InjectFile12.ropen()
+
+InjectMatrix12 = new Matrix()
+InjectMatrix12.scanf(InjectFile12,80,2)
+concb2 = new Vector(80)
+for(i=0; i<concb2.size; i = i+1){
+	if(i>=InjectMatrix12.nrow){
+		concb2.x[i] = concb2.x[i-1]
+	}else{
+		concb2.x[i]=InjectMatrix12.x[i][1]
+	}
+}
+
+objref InjectMatrix13
+
+objref InjectFile13,  concb3
+InjectFile13 = new File("na3.dat")
+InjectFile13.ropen()
+
+InjectMatrix13 = new Matrix()
+InjectMatrix13.scanf(InjectFile13,80,2)
+concb3 = new Vector(80)
+for(i=0; i<concb3.size; i = i+1){
+	if(i>=InjectMatrix13.nrow){
+		concb3.x[i] = concb3.x[i-1]
+	}else{
+		concb3.x[i]=InjectMatrix13.x[i][1]
+	}
+}
+objref InjectMatrix14
+
+objref InjectFile14,  concb4
+InjectFile14 = new File("na4.dat")
+InjectFile14.ropen()
+
+InjectMatrix14 = new Matrix()
+InjectMatrix14.scanf(InjectFile14,80,2)
+concb4 = new Vector(80)
+for(i=0; i<concb4.size; i = i+1){
+	if(i>=InjectMatrix14.nrow){
+		concb4.x[i] = concb4.x[i-1]
+	}else{
+		concb4.x[i]=InjectMatrix14.x[i][1]
+	}
+}
+objref InjectMatrix15
+
+objref InjectFile15,  concb5
+InjectFile15 = new File("na5.dat")
+InjectFile15.ropen()
+
+InjectMatrix15 = new Matrix()
+InjectMatrix15.scanf(InjectFile15,80,2)
+concb5 = new Vector(80)
+for(i=0; i<concb5.size; i = i+1){
+	if(i>=InjectMatrix15.nrow){
+		concb5.x[i] = concb5.x[i-1]
+	}else{
+		concb5.x[i]=InjectMatrix15.x[i][1]
+	}
+}
+objref InjectMatrix16
+
+objref InjectFile16,  concb6
+InjectFile16 = new File("na6.dat")
+InjectFile16.ropen()
+
+InjectMatrix16 = new Matrix()
+InjectMatrix16.scanf(InjectFile16,80,2)
+concb6 = new Vector(80)
+for(i=0; i<concb6.size; i = i+1){
+	if(i>=InjectMatrix16.nrow){
+		concb6.x[i] = concb6.x[i-1]
+	}else{
+		concb6.x[i]=InjectMatrix16.x[i][1]
+	}
+}
+objref InjectMatrix17
+
+objref InjectFile17,  concb7
+InjectFile17 = new File("na7.dat")
+InjectFile17.ropen()
+
+InjectMatrix17 = new Matrix()
+InjectMatrix17.scanf(InjectFile17,80,2)
+concb7 = new Vector(80)
+for(i=0; i<concb7.size; i = i+1){
+	if(i>=InjectMatrix17.nrow){
+		concb7.x[i] = concb7.x[i-1]
+	}else{
+		concb7.x[i]=InjectMatrix17.x[i][1]
+	}
+}

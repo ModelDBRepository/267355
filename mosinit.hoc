@@ -1,0 +1,27 @@
+load_file("nrngui.hoc")
+load_proc("nrnmainmenu")
+
+//Set cell morphology and make ais 40um
+xopen("28_04_10_num19.hoc")
+
+//Set the distribution and conductances of mechanisms
+xopen("Cell parameters.hoc")
+
+//Load morphology and parameters
+parameters()
+geom_nseg()
+
+
+//import experimental data and set figures
+xopen("experiments.hoc")
+xopen("runplots.hoc")
+xopen("RunBlocks.hoc")
+
+//Run and display model
+xopen("RunControl.ses")
+
+
+
+//Apply changes in parameters
+init_channels()
+run_plots()
