@@ -18,4 +18,9 @@ For this model we used NEURON 8.0 on Windows environment.
 Questions regarding this model should be directed to
 luiza.filipis@univ-grenoble-alpes.fr 
 or
-marco.canepari@univ-grenoble-alpes.fr 
+marco.canepari@univ-grenoble-alpes.fr
+
+Changelog
+---------
+2023-05-30: fix for compatibility with the upcoming NEURON 9 release,
+            specifically neuronsimulator/nrn#1992 on GitHub.

@@ -30,7 +30,7 @@ PARAMETER {
 NEURON {
 	SUFFIX Kv7
 	USEION k READ ek WRITE ik
-        RANGE gkdr,gbar,ik,alpn
+	RANGE gkdr, gbar, ik
 	GLOBAL ninf,taun, vbr, vbr2, vbr3
 }
 
